@@ -32,11 +32,11 @@
                    <th colspan="5">Your Items</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="height:500px;">
                 {% for cart_item in cart_items %}
                 <tr>
                     <td>
-                        <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}" alt="" style="width:100px;height:100px;" class="float-left rounded custom_image">
+                        <a href=" "><img src="{{cart_item.product.image.url}}" alt="" style="width:100px;height:100px;" class="float-left rounded custom_image">
                         </a>
                     </td>
                     <td class="text-lef">{{cart_item.product.name}} <br>
@@ -81,15 +81,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-left"
-                        Your total is $ <strong>{{total}}</strong>
+                    <td class="text-left">
+                    <p>Your total is $ <strong>{{total}}</strong></p>
                     </td>
                 </tr>
             </tbody>
         </table>
         <div class="mx-auto">
             <a href="{% url 'ecomapp:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Continue Shopping</a>
-
+            <a href="{% url 'ecomapp:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Pay</a>
         </div>
 
     </div>
