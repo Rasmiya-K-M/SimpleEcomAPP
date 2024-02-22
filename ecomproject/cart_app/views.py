@@ -48,8 +48,8 @@ def cart_remove(request,product_id):
     return redirect('cart_app:cart_detail')
 
 def full_remove(request,product_id):
-    cart = Cart.objects.get(cart_id=_cart_id(request))
-    product = get_object_or_404(Product, id=product_id)
-    cart_item = CartItem.objects.get(product=product, cart=cart)
+    cart=Cart.objects.get(cart_id=_cart_id(request))
+    product=get_object_or_404(Product,id=product_id)
+    cart_item=CartItem.objects.get(product=product,cart=cart)
     cart_item.delete()
     return redirect('cart_app:cart_detail')
